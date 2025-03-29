@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+
+
+    <link rel="stylesheet" href="../style.css">
+
+
+    <script defer src="./rockpaperscissors.js"></script>
+    <link rel="icon" type="image/png" href="obrázky/favicon.png">
+
+
+</head>
+<body>
+
+    <!-- Horní navigace -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../AboutMe.html">About me</a></li>
+                <li><a href="../TheGirls.html">The girls</a></li>
+                <li><a href="../Quiz.html">Quiz</a></li>
+                <li><a href="../games.html" class="active">Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Herní sekce -->
+    <section class="game-container">
+        <h1>Rock, Paper, Scissors</h1>
+        <p>Choose your move:</p>
+
+        <div class="rps-buttons">
+            <button class="rps-choice" data-choice="rock">🪨 Rock</button>
+            <button class="rps-choice" data-choice="paper">📜 Paper</button>
+            <button class="rps-choice" data-choice="scissors">✂️ Scissors</button>
+        </div>
+
+        <p id="player-choice">Your choice: </p>
+        <p id="computer-choice">Computer's choice: </p>
+        <p id="result"></p>
+
+        <button id="restart">Play Again</button>
+        <button id="back-to-games">Back to Games</button> <!-- Nové tlačítko -->
+    </section>
+
+    <!-- dolní lišta  -->
+    <footer class="footer">
+        <p>POUZE PRO STUDIJNÍ ÚČELY</p>
+
+</footer>
+
+</body>
+</html>

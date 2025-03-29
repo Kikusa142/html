@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Girls – Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="obrázky/favicon.png">
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <h1 class="title">THE GIRLS</h1>
+    <nav class="topnav">
+      <a href="index.html">Home</a>
+      <a href="AboutMe.html">About me</a>
+      <a href="TheGirls.html">The girls</a>
+      <a href="Quiz.html" class="active">Quiz</a>
+      <a href="games.html">Games</a>
+    </nav>
+  </div>
+
+  <div class="bottom-bar"></div>
+
+  <h1>Who are you from The Girls?</h1>
+
+  <div id="quiz-container">
+    <form id="quiz-form">
+      <p>1. What do you do in your free time?</p>
+      <label><input type="radio" name="question1" value="Anicka"> Play the guitar</label>
+      <label><input type="radio" name="question1" value="Sasa"> Read</label>
+      <label><input type="radio" name="question1" value="Sofi"> Draw and paint</label>
+      <label><input type="radio" name="question1" value="Kiki"> Crochet</label>
+
+      <p>2. Where would you prefer to spend your vacation?</p>
+      <label><input type="radio" name="question2" value="Anicka"> In the mountains</label>
+      <label><input type="radio" name="question2" value="Sasa"> At the beach</label>
+      <label><input type="radio" name="question2" value="Sofi"> With friends</label>
+      <label><input type="radio" name="question2" value="Kiki"> At home</label>
+
+      <p>3. What is your favorite planet?</p>
+      <label><input type="radio" name="question3" value="Anicka"> Venus</label>
+      <label><input type="radio" name="question3" value="Sasa"> Neptune</label>
+      <label><input type="radio" name="question3" value="Sofi"> Mars</label>
+      <label><input type="radio" name="question3" value="Kiki"> Jupiter</label>
+
+      <p>4. What kind of top would you wear?</p>
+      <label><input type="radio" name="question4" value="Anicka"> A tank top</label>
+      <label><input type="radio" name="question4" value="Sasa"> A loose top</label>
+      <label><input type="radio" name="question4" value="Sofi"> A tight top</label>
+      <label><input type="radio" name="question4" value="Kiki"> A long-sleeve shirt</label>
+
+      <p>5. What do you like about school?</p>
+      <label><input type="radio" name="question5" value="Anicka"> History</label>
+      <label><input type="radio" name="question5" value="Sasa"> PE (Physical Education)</label>
+      <label><input type="radio" name="question5" value="Sofi"> Art</label>
+      <label><input type="radio" name="question5" value="Kiki"> Biology</label>
+
+      <p>6. What is your favorite color?</p>
+      <label><input type="radio" name="question6" value="Anicka"> Blue</label>
+      <label><input type="radio" name="question6" value="Sasa"> Purple-blue</label>
+      <label><input type="radio" name="question6" value="Sofi"> Dark red</label>
+      <label><input type="radio" name="question6" value="Kiki"> Green</label>
+
+      <p>7. What is your favorite food?</p>
+      <label><input type="radio" name="question7" value="Anicka"> Duck</label>
+      <label><input type="radio" name="question7" value="Sasa"> Syrniki</label>
+      <label><input type="radio" name="question7" value="Sofi"> Chicken na paprice</label>
+      <label><input type="radio" name="question7" value="Kiki"> Sushi</label>
+
+      <p>8. What is your favorite animal?</p>
+      <label><input type="radio" name="question8" value="Anicka"> Cow</label>
+      <label><input type="radio" name="question8" value="Sasa"> Red panda</label>
+      <label><input type="radio" name="question8" value="Sofi"> Whale</label>
+      <label><input type="radio" name="question8" value="Kiki"> Alpaca</label>
+
+
+        <br> 
+        <br>
+        <button type="button" onclick="calculateResult()">Get Result</button>
+        
+        <button type="button" onclick="restartQuiz()">Restart Quiz</button>
+      </form>
+  
+      <div id="result"></div>
+    </div>
+  
+    <footer class="footer">
+      <p>POUZE PRO STUDIJNÍ ÚČELY</p>
+    </footer>
+  
+    <!-- Propojení s externím JavaScript -->
+    <script src="script.js"></script>
+  </body>
+  </html

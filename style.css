@@ -1,0 +1,1298 @@
+
+
+
+/* 
+horni lista */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top-bar, .bottom-bar {
+    background-color: #5a8f5c;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.topnav {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+}
+
+.topnav a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+
+
+
+
+ /* dolni lista  */
+
+
+.content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+footer.footer {
+    background-color: #5a8f5c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Resetování marginu a paddingu pro celé tělo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  
+  /* Styly pro obdélník */
+  .rectangle {
+    position:absolute;
+    /* margin-top: 500px;
+    margin-left: 30px;  */
+    top: 45%;
+    left: 50px;
+    transform: translateY(-50%); /* Aby byl obdélník vertikálně vycentrován */
+    width: 600px; 
+    height: 750px;
+    background-color: #71b474; 
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    border-radius: 10px; /* Zaoblené rohy */
+    text-align: center;
+   
+  }
+
+
+
+  .rectangle2 {
+    position:absolute;
+    /* margin-top: 500px;
+    margin-right: 30px;  */
+    top: 45%;
+    right: 50px;
+    transform: translateY(-50%); /* Aby byl obdélník vertikálně vycentrován */
+    width: 600px; 
+    height: 750px;
+    background-color: #71b474; 
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    border-radius: 10px; /* Zaoblené rohy */
+    text-align: center;
+   
+  }
+
+
+
+
+
+
+
+  /* Kvízový kontejner */
+/* #quiz-container {
+    background-color: #fff;  
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    width: 600px;
+    margin: 40px auto;  
+    text-align: left;
+    font-size: 1.1rem;
+    color: #333;
+} */
+
+/* Kvízové otázky */
+/* #quiz-container p {
+    margin-bottom: 15px;
+} */
+
+/* Odpovědi (radio buttons) */
+/* label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+} */
+
+/* Tlačítko pro odeslání kvízu */
+/* button {
+    padding: 10px 20px;
+    background-color: #71b474; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+} */
+
+/* button:hover {
+    background-color: #5a9a62; 
+} */
+
+/* Výsledek kvízu */
+/* #result {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    line-height: 1.5;
+} */
+
+
+
+
+
+
+
+
+
+/* Kvízový kontejner */
+#quiz-container {
+    background-color: #fff;  /* Bílá barva pro kvíz */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný stín pro oddělení */
+    width: 600px;
+    margin: 40px auto;  /* Aby byl kvíz vystředěný */
+    text-align: left;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 100px; /* přidá prostor dole */
+}
+
+
+/* Kvízové otázky */
+#quiz-container p {
+    margin-bottom: 15px;
+}
+
+/* Odpovědi (radio buttons) */
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Tlačítko pro odeslání kvízu */
+button {
+    padding: 10px 20px;
+    background-color: #71b474;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  
+  button:hover {
+    background-color: #5a9a62;
+  }
+  
+
+/* Výsledek kvízu */
+#result {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #444;
+    text-align: center;
+  }
+  
+/* Pro přehlednost a lepší rozložení otázek a odpovědí */
+#quiz-container p,
+#quiz-container label {
+    font-size: 1rem;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+
+
+/* #result {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333;
+} */
+/* #result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; 
+    text-align: center;
+  } */
+
+  /* #result {
+    display: block !important;
+    color: black !important;
+    font-size: 24px !important;
+    background-color: yellow; 
+    padding: 10px;
+    margin-top: 20px;
+    z-index: 999;
+  } */
+
+
+
+
+
+/* === RESET & GLOBAL STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* === NAVIGATION === */
+header {
+    background-color: #5a8f5c;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+/* === ABOUT ME SECTION === */
+.about-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dvě hlavní sekce vedle sebe */
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Informace vlevo */
+.info-box {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h2 {
+    color: #5a8f5c;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-box ul {
+    list-style: none;
+}
+
+.info-box li {
+    font-size: 18px;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-box li:last-child {
+    border-bottom: none;
+}
+
+/* Fotka vpravo */
+.photo-box {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #5a8f5c;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+/* === PET SECTION === */
+.pet-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pet-info {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.pet-info ul {
+    list-style: none;
+}
+
+.pet-info li {
+    font-size: 18px;
+    padding: 8px 0;
+}
+
+
+
+
+/* Fotogalerie 3x2 */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px); /* Přidá stejnou velikost i pro řádky */
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+}
+
+/* Obrázky v galerii */
+.photo-gallery img {
+    width: 100%;
+    height: 100%; /* Přidáno pro zachování poměru */
+    object-fit: cover; /* Ořízne obrázky tak, aby všechny měly stejnou velikost */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* === GLOBAL STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* === NAVIGATION === */
+header {
+    background-color: #5a8f5c;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === THE GIRLS PAGE === */
+.girls-container {
+    max-width: 1200px; /* Zvýšená šířka kontejneru */
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.girls-container h1 {
+    color: #5a8f5c;
+    font-size: 36px; /* Zvětšený nadpis */
+    margin-bottom: 10px;
+}
+
+.girls-container p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Klikací galerie */
+.girls-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Přizpůsobení pro menší obrazovky */
+}
+
+/* Karta pro každou holku */
+.girl-card {
+    text-align: center;
+    width: 250px;
+}
+
+/* Klikací obrázky */
+.girl-card a {
+    display: block;
+}
+
+/* Odkazy v galerii - jen obrázky, ne text */
+.girls-gallery a {
+    text-decoration: none; /* Zruší podtržení odkazu */
+}
+
+/* Klikací obrázky zůstanou aktivní */
+.girls-gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.girls-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Jména pod fotkami - NEjsou klikací */
+.girl-card h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #5a8f5c;
+    text-decoration: none; /* Zruší podtržení */
+    pointer-events: none; /* Zajistí, že jméno není klikací */
+}
+
+/* Popis pod fotkami */
+.girl-card p {
+    font-size: 16px;
+    color: #444;
+    margin-top: 8px;
+}
+
+/* === ADDITIONAL SECTION BELOW (SCROLLABLE) === */
+.about-girls {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-girls h2 {
+    font-size: 28px;
+    color: #5a8f5c;
+}
+
+.about-girls p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* === FOOTER === */
+.footer {
+    background-color: #5a8f5c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative; /* Footer se pohybuje se stránkou */
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === GAMES PAGE === */
+.games-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.games-container h1 {
+    color: #5a8f5c;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Herní grid */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Herní karty (obrázky s efektem) */
+.game-card {
+    text-align: center;
+}
+
+/* Klikací obrázky */
+.game-card a {
+    display: block;
+    text-decoration: none;
+}
+
+/* Obrázky her */
+.game-card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efekt při najetí myší */
+.game-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Jména her */
+.game-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #5a8f5c;
+    text-decoration: none;
+    pointer-events: none; /* Zajistí, že jméno není klikací */
+}
+
+
+
+
+
+
+
+
+
+
+/* === TIC-TAC-TOE STYLY === */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);  /* Širší pole */
+    grid-template-rows: repeat(3, 150px);  /* Vyšší pole */
+    gap: 10px;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+/* Herní políčka - zvětšená */
+.cell {
+    width: 150px;
+    height: 150px;
+    background-color: #f5f5f5;
+    border: 4px solid #5a8f5c;
+    font-size: 48px;  /* Větší text */
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover efekt */
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+/* Výsledek hry - větší text */
+#result {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #5a8f5c;
+    font-weight: bold;
+    display: block; /* přidat */
+    visibility: visible; /* přidat */
+    min-height: 40px; /* rezervovat místo */
+    background-color: #eafbea; /* dočasné zvýraznění */
+    text-align: center;
+}
+
+/* Tlačítka Restart a Back */
+#restart, #back-to-games {
+    font-size: 20px;
+    padding: 15px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+/* === ROCK, PAPER, SCISSORS VĚTŠÍ DESIGN === */
+.rps-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Zvětšená tlačítka */
+.rps-choice {
+    padding: 20px 40px;
+    font-size: 24px;  /* Větší text */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+/* Hover efekt */
+.rps-choice:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);  /* Efekt zvětšení při najetí myší */
+}
+
+/* Výsledek hry - větší text */
+#player-choice, #computer-choice, #result {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #5a8f5c;
+    font-weight: bold;
+}
+
+/* Tlačítka Restart a Back */
+#restart, #back-to-games {
+    font-size: 20px;
+    padding: 15px 30px;
+}
+
+
+
+
+/* Výsledek hry - efekt zobrazení */
+#result {
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0; /* Skryté na začátku */
+    transition: opacity 0.5s ease, transform 0.3s ease; /* Plynulé zobrazení */
+}
+
+/* Barvy pro výsledek */
+.win {
+    color: #28a745; /* Zelená pro výhru */
+    transform: scale(1.2); /* Na chvíli se zvětší */
+}
+
+.lose {
+    color: #dc3545; /* Červená pro prohru */
+    transform: scale(1.2);
+}
+
+.draw {
+    color: #007bff; /* Modrá pro remízu */
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === MEMORY GAME - VĚTŠÍ DESIGN === */
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 150px); /* Větší mřížka */
+    grid-template-rows: repeat(4, 150px);
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styl jednotlivých karet */
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: #5a8f5c;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efekt otočení karty */
+.card.flipped {
+    background-color: white;
+    color: #5a8f5c;
+    font-weight: bold;
+    transform: rotateY(180deg); /* Animace otočení */
+}
+
+/* Výsledek hry - větší text */
+#game-message {
+    font-size: 28px;
+    color: #5a8f5c;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Styl tlačítek */
+#restart, #back-to-games {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 22px;
+    background-color: #5a8f5c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#restart:hover, #back-to-games:hover {
+    background-color: #4a7a4c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* === SNAKE GAME STYLY === */
+#gameCanvas {
+    display: block;
+    margin: 20px auto;
+    background-color: #c2f0c2; /* Světle zelená tráva */
+    border: 10px solid #5a8f5c; /* Zelený rámeček */
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Jemný stín */
+}
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5a8f5c;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Restart a Back to Games tlačítka */
+#restart, #back-to-games {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #5a8f5c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#restart:hover, #back-to-games:hover {
+    background-color: #4a7a4c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* === HOME PAGE === */
+.home-content {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #e6ffe6, #ffffff);
+    min-height: 100vh;
+  }
+  
+  .home-content h2 {
+    font-size: 36px;
+    color: #5a8f5c;
+    margin-bottom: 20px;
+  }
+  
+  .intro {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  
+  .home-image {
+    width: 300px;
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    margin: 30px auto;
+    display: block;
+  }
+  
+  .about-box {
+    background-color: #f0fff0;
+    border: 2px solid #a4d8a4;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: left;
+    font-size: 17px;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .about-box h3 {
+    margin-bottom: 10px;
+    color: #5a8f5c;
+    font-size: 22px;
+  }
+  
+  .quick-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .home-button {
+    text-decoration: none;
+    background-color: #5a8f5c;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #4a7a4c;
+  }
+  
+
+
+
+  /* === HOME PAGE – GALERIE === */
+.home-gallery {
+    padding: 60px 20px;
+    background-color: #f5fff5;
+    text-align: center;
+  }
+  
+  .home-gallery h2 {
+    font-size: 26px;
+    color: #5a8f5c;
+    margin-bottom: 30px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 sloupce */
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr); /* Na tabletech 2 sloupce */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .gallery-grid {
+      grid-template-columns: 1fr; /* Na mobilech 1 sloupec */
+    }
+  }
+  
+  
+  .gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+
+
+
+  .girls-extra {
+    background-color: #ffffff;
+    max-width: 750px;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .girls-extra h2 {
+    font-size: 28px;
+    color: #5a8f5c;
+    margin-bottom: 20px;
+  }
+  
+  .girls-extra ul {
+    list-style: none;
+    padding: 0;
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.7;
+  }
+  
+  .girls-extra ul li {
+    margin-bottom: 8px;
+  }
+  
+  .girls-extra ul li::before {
+    content: "✔️ ";
+    color: #5a8f5c;
+    margin-right: 6px;
+  }
+  
+  .girls-extra blockquote {
+    font-style: italic;
+    background-color: #f7fdf7;
+    border-left: 5px solid #5a8f5c;
+    padding: 15px 20px;
+    margin: 30px auto;
+    color: #444;
+    font-size: 17px;
+    border-radius: 10px;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+  .girls-extra blockquote span {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #777;
+  }
+  
+  .girls-extra h3 {
+    font-size: 24px;
+    color: #5a8f5c;
+    margin: 40px 0 20px;
+  }
+  
+  .extra-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .extra-gallery img {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .extra-gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+
+
+
+
+ /* === ABOUT ME / INDIVIDUAL PAGES === */
+.about-section {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .about-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .about-text h2 {
+    color: #5a8f5c;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    font-size: 17px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+  
+  .about-photo-box img {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+  }
+  
+  .animal-box {
+    text-align: center;
+  }
+  
+  .animal-box h3 {
+    font-size: 22px;
+    color: #5a8f5c;
+    margin-bottom: 15px;
+  }
+  
+  .animal-box img {
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+
+
+  .animal-gallery {
+    padding: 50px 20px;
+    background-color: #f5fff5;
+    text-align: center;
+  }
+  
+  .animal-gallery h3 {
+    font-size: 24px;
+    color: #5a8f5c;
+    margin-bottom: 30px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  
