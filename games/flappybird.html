@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flappy Bird</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../obrázky/favicon.png">
+  <script defer src="flappybird.js"></script>
+</head>
+<body>
+
+  <!-- Navigace -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../AboutMe.html">About me</a></li>
+        <li><a href="../TheGirls.html">The girls</a></li>
+        <li><a href="../Quiz.html">Quiz</a></li>
+        <li><a href="../games.html" class="active">Games</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Herní sekce -->
+  <section class="game-container">
+    <h1>Flappy Bird</h1>
+    <div class="flappy-wrapper">
+      <canvas id="gameCanvas" width="500" height="600"></canvas>
+      <p id="instruction">Press <strong>space</strong> to flap!</p>
+      <!-- <p id="score">Score: 0</p> -->
+      <p id="scoreDisplay">Score: 0</p>
+
+      <p id="gameOver" style="display: none;">Game Over 💔</p>
+      <button id="playBtn">Play</button>
+      <button id="restartBtn" style="display: none;">Restart</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>POUZE PRO STUDIJNÍ ÚČELY</p>
+  </footer>
+
+</body>
+</html>

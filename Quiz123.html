@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Who Are You From The Girls?</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Girls – Quiz</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="obrázky/favicon.png">
 </head>
+
 <body>
 
-  <!-- Horní lišta -->
   <div class="top-bar">
     <h1 class="title">THE GIRLS</h1>
     <nav class="topnav">
@@ -20,10 +20,11 @@
     </nav>
   </div>
 
-  <!-- Kontejner -->
-  <div id="quiz-container">
-    <h1>Who are you from The Girls?</h1>
+  <div class="bottom-bar"></div>
 
+  <h1>Who are you from The Girls?</h1>
+
+  <div id="quiz-container">
     <form id="quiz-form">
       <p>1. What do you do in your free time?</p>
       <label><input type="radio" name="question1" value="Anicka"> Play the guitar</label>
@@ -73,55 +74,30 @@
       <label><input type="radio" name="question8" value="Sofi"> Whale</label>
       <label><input type="radio" name="question8" value="Kiki"> Alpaca</label>
 
-      <br><br>
-      <button type="button" onclick="calculateResult()">Get Result</button>
-      <button type="button" onclick="restartQuiz()">Restart</button>
-    </form>
 
-    <div id="result"></div>
-  </div>
+        <br> 
+        <br>
+        <button type="button" onclick="calculateResult()">Get Result</button>
+        
+        <button type="button" onclick="restartQuiz()">Restart Quiz</button>
+      </form>
+  
+      <div id="result"></div>
+    </div>
 
-  <!-- Dolní lišta -->
-  <footer class="footer">
-    <p>POUZE PRO STUDIJNÍ ÚČELY</p>
-  </footer>
-
-  <!-- JavaScript uvnitř HTML -->
-  <script>
-    function calculateResult() {
-      const scores = { Anicka: 0, Sasa: 0, Sofi: 0, Kiki: 0 };
-      const answers = document.querySelectorAll('input[type="radio"]:checked');
-
-      answers.forEach(answer => {
-        const value = answer.value;
-        if (scores[value] !== undefined) {
-          scores[value]++;
-        }
-      });
-
-      let highest = "";
-      let max = 0;
-
-      for (let name in scores) {
-        if (scores[name] > max) {
-          max = scores[name];
-          highest = name;
-        }
-      }
-
-      const resultBox = document.getElementById("result");
-      resultBox.textContent = highest
-        ? "You are most like " + highest + "! 🎉"
-        : "Please answer the questions 🙂";
-
-      resultBox.scrollIntoView({ behavior: "smooth" });
-    }
-
-    function restartQuiz() {
-      const checked = document.querySelectorAll('input[type="radio"]:checked');
-      checked.forEach(input => input.checked = false);
-      document.getElementById("result").textContent = "";
-    }
-  </script>
-</body>
-</html>
+    <!-- modal -->
+    <div id="resultModal" class="modal">
+      <div class="modal-content">
+        <h2 id="resultMessage"></h2>
+        <button id="closeModalBtn" class="close-btn">Close</button>
+      </div>
+    </div>
+  
+    <footer class="footer">
+      <p>POUZE PRO STUDIJNÍ ÚČELY</p>
+    </footer>
+  
+    <!-- Propojení s externím JavaScript -->
+    <script src="script.js"></script>
+  </body>
+  </html

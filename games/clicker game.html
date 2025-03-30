@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cookie Clicker</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/png" href="../obrázky/favicon.png">
+  <script defer src="clicker.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../AboutMe.html">About me</a></li>
+            <li><a href="../TheGirls.html">The girls</a></li>
+            <li><a href="../Quiz.html">Quiz</a></li>
+            <li><a href="../games.html" class="active">Games</a></li>
+          </ul>
+        </nav>
+      </header>
+
+  <section class="cookie-clicker-container">
+    <h2 id="level">Level: 1</h2>
+    <p id="score">Cookies: 0</p>
+
+    <div class="cookie-wrapper">
+      <img src="../obrázky/cookie.webp" alt="Cookie" id="cookie" />
+      <div id="floating-points"></div>
+    </div>
+
+    <button id="upgrade-btn">Upgrade (10 🍪)</button>
+    <button id="customise-btn">Customise</button>
+
+    <!-- <div id="customise-shop" class="hidden">
+      <h3>Customize your game!</h3>
+      <p>More cookies and background themes coming soon! 🍫</p>
+    </div> -->
+    <!-- <button id="customise-btn">Customise</button> -->
+
+    <!-- Skrytý shop -->
+    <div id="customise-shop" class="hidden">
+      <h3>Customise Your Game 🍪</h3>
+    
+      <button class="shop-btn" onclick="buyBackground('pink', 100)">Pink Background (100 🍪)</button>
+      <button class="shop-btn" onclick="buyBackground('stars', 300)">Stars Background (300 🍪)</button>
+      <button class="shop-btn" onclick="buyCookie('rainbow', 200)">Rainbow Cookie (200 🍪)</button>
+    </div>
+    
+  </section>
+
+
+  
+
+  <footer class="footer">
+    <p>POUZE PRO STUDIJNÍ ÚČELY</p>
+  </footer>
+
+</body>
+</html>
