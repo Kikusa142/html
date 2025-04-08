@@ -1,51 +1,3 @@
-// let cookies = 0;
-// let cookiesPerClick = 1;
-// let upgradeCost = 10;
-// let level = 1;
-
-// const cookie = document.getElementById("cookie");
-// const score = document.getElementById("score");
-// const levelDisplay = document.getElementById("level");
-// const upgradeBtn = document.getElementById("upgrade-btn");
-// const customiseBtn = document.getElementById("customise-btn");
-// const customiseShop = document.getElementById("customise-shop");
-// const floatingContainer = document.getElementById("floating-points");
-
-// cookie.addEventListener("click", (e) => {
-//   cookies += cookiesPerClick;
-//   updateScore();
-
-//   const floating = document.createElement("div");
-//   floating.classList.add("floating-text");
-//   floating.textContent = `+${cookiesPerClick}`;
-//   floating.style.left = e.clientX + "px";
-//   floating.style.top = e.clientY + "px";
-//   floatingContainer.appendChild(floating);
-
-//   setTimeout(() => {
-//     floating.remove();
-//   }, 1000);
-// });
-
-// upgradeBtn.addEventListener("click", () => {
-//   if (cookies >= upgradeCost) {
-//     cookies -= upgradeCost;
-//     cookiesPerClick += 1;
-//     upgradeCost = Math.floor(upgradeCost * 1.7);
-//     level++;
-//     upgradeBtn.textContent = `Upgrade (${upgradeCost} 🍪)`;
-//     updateScore();
-//     levelDisplay.textContent = `Level: ${level}`;
-//   }
-// });
-
-// customiseBtn.addEventListener("click", () => {
-//   customiseShop.classList.toggle("hidden");
-// });
-
-// function updateScore() {
-//   score.textContent = `Cookies: ${cookies}`;
-// }
 
 
 
@@ -121,42 +73,58 @@ function updateScore() {
 
 
 
-
-
-
 document.getElementById("customise-btn").addEventListener("click", () => {
-    const shop = document.getElementById("customise-shop");
-    shop.classList.toggle("show");
-  });
-  
-  function buyBackground(type, cost) {
-    if (cookies >= cost) {
-      cookies -= cost;
-      updateScore();
-  
-      if (type === "pink") {
-        document.body.style.background = "#ffe4ec";
-      } else if (type === "stars") {
-        document.body.style.backgroundImage = "url('obrázky/stars.jpg')";
-        document.body.style.backgroundSize = "cover";
-      }
-    } else {
-      alert("Not enough cookies!");
+  const shop = document.getElementById("customise-shop");
+  shop.classList.toggle("show");
+});
+
+// ✅ FUNKCE NA NÁKUP POZADÍ
+function buyBackground(type, cost) {
+  if (cookies >= cost) {
+    cookies -= cost;
+    updateScore();
+
+    if (type === "pink") {
+      document.body.style.background = "#ffe4ec";
+    } else if (type === "stars") {
+      document.body.style.backgroundImage = "url('../obrázky/starbackround.jpg')";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundPosition = "center";
+
+
+    } else if (type === "blue") {
+      document.body.style.background = "#96c3eb";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundPosition = "center";
     }
+    
+
+  } else {
+    alert("Not enough cookies!");
   }
-  
-  function buyCookie(type, cost) {
-    if (cookies >= cost) {
-      cookies -= cost;
-      updateScore();
-  
-      if (type === "rainbow") {
-        document.getElementById("cookie").src = "obrázky/cookie-rainbow.png";
-      }
-    } else {
-      alert("Not enough cookies!");
+}
+
+// ✅ FUNKCE NA NÁKUP COOKIE
+function buyCookie(type, cost) {
+  if (cookies >= cost) {
+    cookies -= cost;
+    updateScore();
+
+    if (type === "rainbow") {
+      document.getElementById("cookie").src = "../obrázky/rainbowcookie.png";
+    } else if (type === "pink") {
+      document.getElementById("cookie").src = "../obrázky/pinkcookie.png";
+    } else if (type === "green") {
+      document.getElementById("cookie").src = "../obrázky/greencookie.png";
+
     }
+  } else {
+    alert("Not enough cookies!");
   }
+}
+
   
 
 
