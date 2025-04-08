@@ -79,3 +79,8 @@ document.getElementById("restart").addEventListener("click", () => {
 
 // Start Game
 game = setInterval(drawGame, 150);
+
+
+document.getElementById("back-to-games").addEventListener("click", function () {
+  window.location.href = "../games.html";
+});

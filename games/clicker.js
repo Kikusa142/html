@@ -163,32 +163,7 @@ document.getElementById("customise-btn").addEventListener("click", () => {
 
 
 
-
-
-// function buyBackground(type, cost) {
-//     if (cookies >= cost) {
-//       cookies -= cost;
-//       updateScore();
-  
-//       if (type === "pink") {
-//         document.body.style.background = "#ffe4ec";
-//       }
-//       // Přidej další styly podle potřeby
-//     } else {
-//       alert("Not enough cookies!");
-//     }
-//   }
-  
-//   function buyCookie(type, cost) {
-//     if (cookies >= cost) {
-//       cookies -= cost;
-//       updateScore();
-  
-//       if (type === "rainbow") {
-//         cookie.src = "obrázky/cookie-rainbow.png"; // nebo jiný obrázek
-//       }
-//     } else {
-//       alert("Not enough cookies!");
-//     }
-//   }
+  document.getElementById("back-to-games").addEventListener("click", function () {
+    window.location.href = "../games.html";
+  });
   

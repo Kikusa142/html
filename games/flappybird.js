@@ -236,3 +236,9 @@ document.addEventListener("keydown", e => {
 
 playBtn.addEventListener("click", resetGame);
 restartBtn.addEventListener("click", resetGame);
+
+
+
+document.getElementById("back-to-games").addEventListener("click", function () {
+  window.location.href = "../games.html";
+});
