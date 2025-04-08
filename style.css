@@ -1393,7 +1393,7 @@ nav ul li a.active {
 
 
 /* TLACITKO BACK TO */
-  .back-to-girls {
+  /* .back-to-girls {
     margin: 30px auto;
     display: block;
     padding: 12px 25px;
@@ -1408,8 +1408,27 @@ nav ul li a.active {
   
   .back-to-girls:hover {
     background-color: #5a9a62;
+  } */
+  
+  .back-to-girls-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #5a8f5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
   }
   
+  .back-to-girls-btn:hover {
+    background-color: #4a7a4c;
+  }
+  
+
+
   
   
 
